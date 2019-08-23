@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercise 4 | Js Day2</title>
+</head>
+<body>
+    <h1>Tantangan Array 3 </h1>
+    <p>press 'ctrl + shift i' to see result</p>
+</body>
+<script>
+/*
+var arr = ["0001", 
+    "Roman Alamsyah", 
+    "Bandar Lampung", 
+    "21/05/1989", 
+    "Membaca"] */
+
+    ///
+    //"0001", 
+    //"Roman Alamsyah Elsharawy", 
+    //"Provinsi Bandar Lampung", 
+    //"21/05/1989", "Pria", "SMA Internasional Metro"
+
+   /* var i = ['12', 'umar', 'bekasi', '01/01/97', 'membaca'];
+    i.splice(1, 1);
+    i.splice(1, 0, 'muhammad umar zumaro');
+    i.splice(2, 1);
+    i.splice(2, 0, 'provinsi bekasi' );
+    i[4] = 'pria';
+    console.log(i) */
+
+
+
+    function dataHandling2(id, nama, alamat, taLir, hobby){
+        
+        // OUTPUT 1
+       var arr = [id, nama, alamat, taLir, hobby]
+       arr.splice(1, 1);
+       arr.splice(1, 0, 'Roman Alamsyah Elsharawy');
+       arr.splice(2, 1);
+       arr.splice(2, 0, 'Provinsi Bandar Lampung' );
+       arr[4] = 'pria';
+       arr.push('SMA Internasional Metro');
+
+       console.log(arr);
+
+       
+       // OUTPUT 2
+       var z = arr[3].split('/');
+       var bulan = z[1];
+       switch (bulan) {
+        case "01" :  { var bulan =  'Januari'}; break;
+        case "02" :  { var bulan =  'Februari'}; break;
+        case "03" : {bulan = 'Maret'}; break;
+        case "04" : {bulan = 'April'}; break;
+        case "05" : {bulan = 'Mei'}; break;
+        case "06" : {bulan = 'Juni'}; break;
+        case "07" : {bulan = 'Juli'}; break;
+        case "08" : {bulan = 'Agustus'}; break;
+        case "09" : {bulan = 'September'}; break;
+        case "10" : {bulan = 'Oktober'}; break;
+        case "11" : {bulan = 'November'}; break;
+        case "12" : {bulan = 'Desember'}; break;
+       default: { console.log('tidak ada bulan ' + bulan + '!')}; break;
+       }
+        console.log(bulan); 
+
+
+
+    // OUTPUT 3
+         var num1 = Number(z[0]);
+         var num2 = Number(z[1]);
+         var num3 = Number(z[2]);
+         //console.log(num1)
+         
+        var arr2 = [num1, num2, num3];
+       
+        var sortDesc = arr2.sort( function( a, b ) {return b - a});
+        console.log(sortDesc);
+        
+       
+    // OUTPUT 4
+        var m = z.join('-');
+        console.log(m)
+    
+
+    // OUTPUT 5
+       var slice2 = arr.slice(1, 2);
+       var k = slice2.toString()
+       //console.log(k[0]);
+       var sl = k.slice(0, 15);
+       console.log(sl);
+      
+    
+    };
+
+    dataHandling2('0001', 'Roman Alamsyah', 'Bandar Lampung', '21/05/1998', 'membaca');
+
+
+
+
+
+</script>
+</html>
