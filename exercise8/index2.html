@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>day 2 | Js</h1>
+</body>
+<script>
+
+    function pasanganTerbesar(num) {
+        
+        var a = num;
+       console.log(a)
+      
+        var b = String(a);
+       
+        var tampung = [];
+
+        for( var i = 0; i < b.length; i++){
+            
+           
+            var num1 = b.substr(i, 2);
+            tampung.push(num1);
+         
+        }
+        
+        var max = Math.max.apply(null, tampung);
+		console.log('the biggest value = ' + max);
+        console.log(' ')
+    
+}
+    // TEST CASES
+    pasanganTerbesar(641573); // 73
+    pasanganTerbesar(12783456); // 83
+    pasanganTerbesar(910233); // 91
+    pasanganTerbesar(71856421); // 85
+    pasanganTerbesar(79918293); // 99
+
+    
+
+</script>
+</html>
