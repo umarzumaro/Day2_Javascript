@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercise  9 | Js Day 2</title>
+</head>
+<body>
+    <h1>Day 2 Js</h1>
+</body>
+<script>
+
+
+
+    function cariMean(num) {
+
+        var nilai = num;
+        var rata, total = 0;
+        
+        var getStr = String(nilai);
+        //console.log(b)
+        //console.log(typeof(b));
+        var tampung = [];
+
+        for( var i = 0; i < getStr.length; i++){
+            
+            
+            var num1 = getStr.substr(i, 1);
+            //console.log(Number(num1));
+            var num2 = Number(num1);
+            //console.log(num2)
+            
+            tampung.push(num2);
+            total = total + num2;
+            
+            
+        }
+        
+        console.log(tampung);
+        rata = total / getStr.length;
+        var pembulatan = Math.ceil(rata);
+        console.log(' rata rata = ' + pembulatan);
+        console.log(' ');
+    }
+
+    cariMean(12345);
+    cariMean(35753);
+    cariMean(65473);
+    cariMean(133);
+    cariMean(77777);
+
+</script>
+</html>
