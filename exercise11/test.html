@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>sdfghjk</p>
+</body>
+<script>
+
+
+    function ab(arr){
+        var b =  arr[1] - arr[0];
+
+        for( var i = 0; i < arr.length; i++){
+            var j = arr[i];
+            //console.log(j)
+            if( j % b == 0){
+                console.log('true')
+            }else{
+                console.log('salah')
+            }
+        }
+    }
+
+    ab([2, 4, 6, 8, 10, 12, 14, 17]);
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercise 11 | Js day 2</title>
+</head>
+<body>
+    <h1>deret aritmatika | Js Day 2</h1>
+    <p>result => press ctrl + shift i</p>
+</body>
+<script>
+
+    
+    function tentukanDeretAritmatika(arr) {
+
+        var b =  arr[1] - arr[0];
+        var a = arr[0];
+        var t = 0;
+        var f = 0;
+
+        for(var i = 1; i <= arr.length; i++){
+
+            //u = i + ( i - 1 ) * b;
+       
+             a = a + arr[i];
+           
+            if( a % b == 0){
+
+                t += 1;
+                
+            }else{
+
+                f += 1;
+                
+            };
+
+        }
+
+            if(f > 1){
+                console.log('false');
+            }else{
+                console.log('true');
+            }
+
+
+    }
+
+    tentukanDeretAritmatika([1, 2, 3, 9, 5, 6, 7, 8]); // true
+    tentukanDeretAritmatika([2, 4, 6, 12, 24]); // false
+    tentukanDeretAritmatika([2, 4, 6, 8]) // true
+    tentukanDeretAritmatika([2, 6, 18, 54]) // false
+    tentukanDeretAritmatika([1, 2, 3, 4, 7, 9]) // false
+
+
+
+</script>
+</html>
